@@ -10,6 +10,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        getFragmentManager().beginTransaction().add(new test(),"key").commit();
+        //(R.id.main) is layout which u want to view fragmeent in
+        //new test() is Fragment class
+        //key is String like id for calling Fragment
+        getFragmentManager().beginTransaction()
+                .add(R.id.main,new test(),"key").commit();
     }
 }
